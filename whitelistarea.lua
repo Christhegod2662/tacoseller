@@ -9,6 +9,10 @@ local joe = {
     2977926684,
     942613091,
     2261064963,
+    2526537975,
+    2025867999,
+    171832854,
+    171832169,
 }
 
 local realtacoppl = {
@@ -20,13 +24,13 @@ local realtacoppl = {
 
 local function main()
     for i,v in pairs(game.Players:GetChildren()) do
-        if table.find(joe,v.UserId) then
-            if v.Character then
-                v.Character:FindFirstChild("Humanoid").DisplayName = '[⭐]'..v.DisplayName
-            end
-        elseif table.find(realtacoppl,v.UserId) then
+        if table.find(realtacoppl,v.UserId) then
             if v.Character then
                 v.Character:FindFirstChild("Humanoid").DisplayName = '[💎]'..v.DisplayName
+            end
+        elseif table.find(joe,v.UserId) then
+            if v.Character then
+                v.Character:FindFirstChild("Humanoid").DisplayName = '[⭐]'..v.DisplayName
             end
         else
             if v.Character then
